@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Drop Down Sidebar Menu | CodingLab </title>-->
+    <link rel="stylesheet" href="rules.css">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>  
+     <script>
+      $(document).ready(function(){
+        $(".profile .icon_wrap").click(function(){
+          $(this).parent().toggleClass("active");
+          $(".notifications").removeClass("active");
+        });
+  
+        $(".notifications .icon_wrap").click(function(){
+          $(this).parent().toggleClass("active");
+           $(".profile").removeClass("active");
+        });
+  
+        $(".show_all .link").click(function(){
+          $(".notifications").removeClass("active");
+          $(".popup").show();
+        });
+  
+        $(".close").click(function(){
+          $(".popup").hide();
+        });
+      });
+    </script> 
+   </head>
+<body>
+  <div class="sidebar close">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus'></i>
+      <span class="logo_name">MOE</span>
+    </div>
+    <ul class="nav-links">
+       
+      <li>
+        <div class="iocn-link">
+        <a href="dashboard.html">
+          <i class='bx bx-grid-alt' ></i>
+          <span class="link_name">Home</span>
+        </a>
+        <i class='bx bxs-chevron-down arrow' ></i>
+      </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="task.html">
+            <i class='bx bx-collection' ></i>
+            <span class="link_name">Student Role</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">Student Role</a></li>
+          <li><a href="task.html">Student Task</a></li>
+          <li><a href="rules.css">Rules And Regulation</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="hr.html">
+            <i class='bx bx-book-alt' ></i>
+            <span class="link_name">Student Services</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Student Services</a></li>
+          <li><a href="hr.html">Human Resourses</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+        <a href="leave.html">
+          <i class='bx bx-pie-chart-alt-2' ></i>
+          <span class="link_name">Student Leave</span>
+        </a>
+        <i class="bx bxs-chevron-down arrow"></i>
+      </div>
+        <ul class="sub-menu ">
+          <li><a class="link_name">Student Leave</a></li>
+          <li><a href="leave.html">Leave Application</a></li>
+          <li><a href="tour.html">Student Tour</a></li>
+        </ul>
+      </li>
+      <li> 
+        <a href="calender.html">
+          <i class='bx bx-history'></i>
+          <span class="link_name">Calendar</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="calender.html">Calendar</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="hr.html">
+          <i class='bx bx-cog' ></i>
+          <span class="link_name">Help</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="rules.html">Help</a></li>
+          <li><a href="promotion.css">Promotion</a></li>
+          <li><a href="register.html">Resignation</a></li>
+        </ul>
+      </li>
+      <li>
+    <div class="profile-details">
+      <div class="profile-content">
+      <img src="profile_pic.png" alt="profileImg">
+      </div>
+      <div class="name-job">
+        <div class="profile_name">Tshering</div>
+        <div class="job">Student</div>
+      </div>
+      <i class='bx bx-log-out' ></i>
+    </div>
+  </li>
+</ul>
+  </div>
+  <div class="home-section">
+    <div class="home-content">
+      <i class='bx bx-menu' ></i>
+      <span class="text"></span>   
+<div class="wrapper">
+  <div class="navbar">
+    <div class="navbar_left">
+      <div class="logo">
+        <a href="#">MOE</a>
+      </div>
+    </div>
+
+    <div class="navbar_right">
+      <div class="notifications">
+        <div class="icon_wrap"><i class="far fa-bell"></i></div>
+        <div class="notification_dd">
+            <ul class="notification_ul">
+                <li class="starbucks success">
+                    <div class="notify_icon">
+                        <span class="icon"></span>  
+                    </div>
+                    <div class="notify_data">
+                        <div class="title">
+                            You have one notimication   
+                        </div>
+                        <div class="sub_title">
+                          <h1>MOE</h1>
+                      </div>
+                      <P>
+                        Administration are goin to conduct student survey.
+                        You are ask to gather at MPH by 7:50AM.
+                        </P>
+                    </div>
+                </li> 
+            </ul>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="icon_wrap">
+          <img src="profile_pic.png" alt="profile_pic">
+          <span class="name">Tshering</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="profile_dd">
+          <ul class="profile_ul">
+            <li><a class="profile" href="profile.html"><span class="picon"><i class="fas fa-user-alt"></i></span> Change Profile</a></li>
+            <li><a class="address" href="change.html"><span class="picon"><i class="fas fa-map-marker"></i></span>Change Password</a></li>
+            <li><a class="logout" href="login.html"><span class="picon"><i class="fas fa-sign-out-alt"></i></span>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<br><br><br>
+
+<!--Rules and Regulation -->
+<div class="container">
+  <div class="title">Student Rules and Regulation</div>
+  <br>
+  <div class="content">
+  <strong><p>Note: Given bellow are the Rules and Regulation that each and every student must follow. In case if you are found out against this rule then, there action will be taken accordingly. </p></strong><br><br>
+  <p> <b> 1.Student Should report on time</b> <br>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, impedit. Quasi iusto ipsam enim nesciunt assumenda ab maxime dolorem, ipsa ipsum ex, aperiam doloremque, sapiente magni nam excepturi neque officia?
+  </p><br><br>
+  <p> <b>2.Student must be in uniform during school hour</b> <br>
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae possimus temporibus, voluptatum officia a distinctio eligendi porro necessitatibus laborum velit similique placeat consequatur ratione recusandae excepturi perferendis minus, nisi atque.</p> <br> <br>
+
+  <p><b> 3.Student are not allowed to bring electonc device in school</b><br> 
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit placeat soluta iure eligendi obcaecati repudiandae, nostrum maiores veritatis praesentium iusto commodi, quod sunt. Tenetur ratione alias quasi quam sed dolore!
+  lore</p> <br><br>
+  <p> <b>4.Student must be on time in any school event</b> <br> 
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias aspernatur eligendi illum, quos ullam inventore! Iste possimus dolor recusandae incidunt corrupti placeat laboriosam. Hic est aut, nesciunt voluptas eos consequuntur?</p> <br><br>
+  
+  <p> <b> 5. Student should participate in school activites.</b> <br>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, impedit. Quasi iusto ipsam enim nesciunt assumenda ab maxime dolorem, ipsa ipsum ex, aperiam doloremque, sapiente magni nam excepturi neque officia?
+  </p><br><br>
+  <p> <b>6.Student have to be on time</b> <br>
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae possimus temporibus, voluptatum officia a distinctio eligendi porro necessitatibus laborum velit similique placeat consequatur ratione recusandae excepturi perferendis minus, nisi atque.</p> <br> <br>
+
+  <p><b> 7.Studet are not allowed to viste town during class hour</b><br> 
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit placeat soluta iure eligendi obcaecati repudiandae, nostrum maiores veritatis praesentium iusto commodi, quod sunt. Tenetur ratione alias quasi quam sed dolore!
+  lore</p> <br><br>
+  <p> <b> 8.Student Should report on time</b> <br>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, impedit. Quasi iusto ipsam enim nesciunt assumenda ab maxime dolorem, ipsa ipsum ex, aperiam doloremque, sapiente magni nam excepturi neque officia?
+  </p><br><br>
+  <p> <b>9.Student must be in uniform during school hour</b> <br>
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae possimus temporibus, voluptatum officia a distinctio eligendi porro necessitatibus laborum velit similique placeat consequatur ratione recusandae excepturi perferendis minus, nisi atque.</p> <br> <br>
+
+  <p><b> 10.Student are not allowed to bring electonc device in school</b><br> 
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit placeat soluta iure eligendi obcaecati repudiandae, nostrum maiores veritatis praesentium iusto commodi, quod sunt. Tenetur ratione alias quasi quam sed dolore!
+  lore</p> <br><br>
+  <p> <b>11.Student must be on time in any school event</b> <br> 
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias aspernatur eligendi illum, quos ullam inventore! Iste possimus dolor recusandae incidunt corrupti placeat laboriosam. Hic est aut, nesciunt voluptas eos consequuntur?</p> <br><br>
+  
+  <p> <b> 12. Student should participate in school activites.</b> <br>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, impedit. Quasi iusto ipsam enim nesciunt assumenda ab maxime dolorem, ipsa ipsum ex, aperiam doloremque, sapiente magni nam excepturi neque officia?
+  </p><br><br>
+  <p> <b>13.Student have to be on time</b> <br>
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae possimus temporibus, voluptatum officia a distinctio eligendi porro necessitatibus laborum velit similique placeat consequatur ratione recusandae excepturi perferendis minus, nisi atque.</p> <br> <br>
+
+  <p><b> 14.Studet are not allowed to viste town during class hour</b><br> 
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit placeat soluta iure eligendi obcaecati repudiandae, nostrum maiores veritatis praesentium iusto commodi, quod sunt. Tenetur ratione alias quasi quam sed dolore!
+  lore</p> <br><br>
+  
+  </div>
+</div>
+
+
+  </section>
+  <script>
+  let arrow = document.querySelectorAll(".arrow");
+  for (var i = 0; i < arrow.length; i++) {
+    arrow[i].addEventListener("click", (e)=>{
+   let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+   arrowParent.classList.toggle("showMenu");
+    });
+  }
+  let sidebar = document.querySelector(".sidebar");
+  let sidebarBtn = document.querySelector(".bx-menu");
+  console.log(sidebarBtn);
+  sidebarBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("close");
+  });
+  </script>
+</body>
+</html>

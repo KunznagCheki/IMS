@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Login form</title>
+	<link rel="stylesheet" href="login.css">
+	
+</head>
+<body>
+	<div class="container">
+		<form id="signup" class="form">
+			<h2>Sign in</h2>
+			<div class="form-field">
+				<label for="stdID">StudentID</label>
+				<input type="text"  name="stdID" id="stdID" autocomplete="off" placeholder="Student ID">
+				<small></small>
+			</div>
+			<div class="form-field">
+				<label for="password">Password</label>
+                <input type="password" name="password" id="password"  autocomplete="off" placeholder="Enter Password">
+                <small></small>
+			</div>
+			<div class="links">
+				<a href="forgot.html">Forgot Password ?</a>
+				<a href="dashboard.html">Signin</a>
+				<a href="register.html">Register</a>
+			</div>
+			<div class="form-field">
+			<input class="btn" type="submit" value="Login">
+			</div>
+		</form>
+	</div>
+	<script src="login.js"></script>
+</body>
+</html>

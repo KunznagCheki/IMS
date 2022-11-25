@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Drop Down Sidebar Menu | CodingLab </title>-->
+    <link rel="stylesheet" href="dashboard.css">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>  
+     <script>
+      $(document).ready(function(){
+        $(".profile .icon_wrap").click(function(){
+          $(this).parent().toggleClass("active");
+          $(".notifications").removeClass("active");
+        });
+  
+        $(".notifications .icon_wrap").click(function(){
+          $(this).parent().toggleClass("active");
+           $(".profile").removeClass("active");
+        });
+  
+        $(".show_all .link").click(function(){
+          $(".notifications").removeClass("active");
+          $(".popup").show();
+        });
+  
+        $(".close").click(function(){
+          $(".popup").hide();
+        });
+      });
+    </script> 
+   </head>
+<body>
+  
+  <div class="sidebar close">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus'></i>
+      <span class="logo_name">MOE</span>
+    </div>
+    <ul class="nav-links">
+       
+      <li>
+        <div class="iocn-link">
+        <a href="dashboard.html">
+          <i class='bx bx-grid-alt' ></i>
+          <span class="link_name">Home</span>
+        </a>
+        <i class='bx bxs-chevron-down arrow' ></i>
+      </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="dashboard.html">Dashboard</a></li>
+      </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-collection' ></i>
+            <span class="link_name">Student Role</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Student Role</a></li>
+          <li><a href="task.html">Student Task</a></li>
+          <li><a href="rules.html">Rules And Regulation</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-book-alt' ></i>
+            <span class="link_name">Student Services</span>
+       </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Student Services</a></li>
+          <li><a href="inventory.html">Inventory and Property</a></li>
+          <li><a href="hr.html">Human Resourses</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+        <a href="#">
+          <i class='bx bx-pie-chart-alt-2' ></i>
+          <span class="link_name">Student Leave</span>
+        </a>
+        <i class="bx bxs-chevron-down arrow"></i>
+      </div>
+        <ul class="sub-menu ">
+          <li><a class="link_name" href="#">Student Leave</a></li>
+          <li><a href="leave.html">Leave Application</a></li>
+          <li><a href="tour.html">Student Tour</a></li>
+        </ul>
+      </li>
+      <li> 
+        <a href="#">
+          <i class='bx bx-history'></i>
+          <span class="link_name">Calendar</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="calender.html">Calendar</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="promotion.html">
+          <i class='bx bx-cog' ></i>
+          <span class="link_name">Promotion</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a href="promotion.html">Promotion</a></li>
+          <li><a href="register.html">Resignation</a></li>
+        </ul>
+      </li>
+      <li>
+    <div class="profile-details">
+      <div class="profile-content">
+      <img src="profile_pic.png" alt="profileImg">
+      </div>
+      <div class="name-job">
+        <div class="profile_name">Tshering</div>
+        <div class="job">Student</div>
+      </div>
+      <i class='bx bx-log-out' ></i>
+    </div>
+  </li>
+</ul>
+ </div>
+  <section class="home-section">
+    <div class="home-content">
+      <i class='bx bx-menu' ></i>
+      <span class="text"></span>   
+<div class="wrapper">
+  <div class="navbar">
+    <div class="navbar_left">
+      <div class="logo">
+        <a href="#">MOE</a>
+      </div>
+    </div>
+
+    <div class="navbar_right">
+      <div class="notifications">
+        <div class="icon_wrap"><i class="far fa-bell"></i></div>
+        <div class="notification_dd">
+                <li class="starbucks success">
+                    <div class="notify_icon">
+                        <span class="icon"></span>  
+                    </div>
+                    <div class="notify_data">
+                        <div class="title">
+                            Notification   
+                        </div>
+                        <div class="sub_title">
+                          <h4>SSO</h4>
+                          <P>
+                            Gather MPH by 4:30PM.
+                            </P>
+                            <h4>DPUT</h4>
+                            <P>
+                              Student get ready for exam..
+                              </P>
+                              <h4>SSO</h4>
+                          <P>
+                            Summite your assigment.
+                            </P>
+                            <h4>DPUT</h4>
+                            <P>
+                              Happy winter vacation.
+                              </P>
+                      </div>
+                    </div>
+                </li> 
+            </ul>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="icon_wrap">
+          <img src="profile_pic.png" alt="profile_pic">
+          <span class="name">Tshering</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="profile_dd">
+          <ul class="profile_ul">
+            <li><a class="profile" href="profile.html"><span class="picon"><i class="fas fa-user-alt"></i></span> Change Profile</a></li>
+            <li><a class="address" href="change.html"><span class="picon"><i class="fas fa-map-marker"></i></span>Change Password</a></li>
+            <li><a class="logout" href="login.html"><span class="picon"><i class="fas fa-sign-out-alt"></i></span>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br><br><br><br> <br><br><br>
+<!--dashboard-->
+<div class="container">
+  <br>
+  <img src="test-2.jpg">
+    <div class="title">Student Details</div>
+    <br>
+  <strong><p>Name: Jigme Peldhen</p></strong>
+  <br>
+  <p>Student_ID: 1220093</p>
+  <br>
+  <p>Email: 12220093@edu.gov.bt</p>
+  <br>
+  <p> Grade: Xll</p>
+  <br>
+  <p> Age: 20</p>
+  <br>
+  <p>Date of Birth: 11/11/2002</p>
+  <br>
+  <p> Village: Tangmay</p>
+  <br>
+  <p>Gewog: Shummar</p>
+  <br>
+  <p>Dzongkhag: Tashigang</p>
+
+  </section>
+  <script>
+  let arrow = document.querySelectorAll(".arrow");
+  for (var i = 0; i < arrow.length; i++) {
+    arrow[i].addEventListener("click", (e)=>{
+   let arrowParent = e.target.parentElement.parentElement;
+   arrowParent.classList.toggle("showMenu");
+    });
+  }
+  let sidebar = document.querySelector(".sidebar");
+  let sidebarBtn = document.querySelector(".bx-menu");
+  console.log(sidebarBtn);
+  sidebarBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("close");
+  });
+  </script>
+</body>
+</html>

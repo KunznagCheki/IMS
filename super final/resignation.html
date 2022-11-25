@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Drop Down Sidebar Menu | CodingLab </title>-->
+    <link rel="stylesheet" href="resignation.css">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>  
+     <script>
+      $(document).ready(function(){
+        $(".profile .icon_wrap").click(function(){
+          $(this).parent().toggleClass("active");
+          $(".notifications").removeClass("active");
+        });
+  
+        $(".notifications .icon_wrap").click(function(){
+          $(this).parent().toggleClass("active");
+           $(".profile").removeClass("active");
+        });
+  
+        $(".show_all .link").click(function(){
+          $(".notifications").removeClass("active");
+          $(".popup").show();
+        });
+  
+        $(".close").click(function(){
+          $(".popup").hide();
+        });
+      });
+    </script> 
+   </head>
+<body>
+  <div class="sidebar close">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus'></i>
+      <span class="logo_name">MOE</span>
+    </div>
+    <ul class="nav-links">
+       
+      <li>
+        <div class="iocn-link">
+        <a href="#">
+          <i class='bx bx-grid-alt' ></i>
+          <span class="link_name">Home</span>
+        </a>
+        <i class='bx bxs-chevron-down arrow' ></i>
+      </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="dashboar.html">Dashboard</a></li>
+          <li><a href="profile.html">Promotion</a></li>
+          <li><a href="resignation.html">Resignation</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-collection' ></i>
+            <span class="link_name">Student Role</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="">Student Role</a></li>
+          <li><a href="task.html">Student Task</a></li>
+          <li><a href="rules.html">Rules And Regulation</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-book-alt' ></i>
+            <span class="link_name">Student Services</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Student Services</a></li>
+          <li><a href="inventory">Inventory and Property</a></li>
+          <li><a href="hr.css">Human Resourses</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+        <a href="#">
+          <i class='bx bx-pie-chart-alt-2' ></i>
+          <span class="link_name">Student Leave</span>
+        </a>
+        <i class="bx bxs-chevron-down arrow"></i>
+      </div>
+        <ul class="sub-menu ">
+          <li><a class="link_name" href="#">Student Leave</a></li>
+          <li><a href="leave.html">Leave Application</a></li>
+          <li><a href="tour.html">Student Tour</a></li>
+        </ul>
+      </li>
+      <li> 
+        <a href="#">
+          <i class='bx bx-history'></i>
+          <span class="link_name">Calendar</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="calender.html">Calendar</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog' ></i>
+          <span class="link_name">Help</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="rules.html">Help</a></li>
+        </ul>
+      </li>
+      <li>
+    <div class="profile-details">
+      <div class="profile-content">
+      <img src="profile_pic.png" alt="profileImg">
+      </div>
+      <div class="name-job">
+        <div class="profile_name">Tshering</div>
+        <div class="job">Student</div>
+      </div>
+      <i class='bx bx-log-out' ></i>
+    </div>
+  </li>
+</ul>
+  </div>
+  <section class="home-section">
+    <div class="home-content">
+      <i class='bx bx-menu' ></i>
+      <span class="text"></span>   
+<div class="wrapper">
+  <div class="navbar">
+    <div class="navbar_left">
+      <div class="logo">
+        <a href="#">MOE</a>
+      </div>
+    </div>
+
+    <div class="navbar_right">
+      <div class="notifications">
+        <div class="icon_wrap"><i class="far fa-bell"></i></div>
+        <div class="notification_dd">
+            <ul class="notification_ul">
+                <li class="starbucks success">
+                    <div class="notify_icon">
+                        <span class="icon"></span>  
+                    </div>
+                    <div class="notify_data">
+                        <div class="title">
+                            You have one notimication   
+                        </div>
+                        <div class="sub_title">
+                          <h1>MOE</h1>
+                      </div>
+                      <P>
+                        Administration are going to conduct student survey.
+                        You are ask to gather at MPH by 7:50AM.
+                        </P>
+                    </div>
+                </li> 
+            </ul>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="icon_wrap">
+          <img src="profile_pic.png" alt="profile_pic">
+          <span class="name">Tshering</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="profile_dd">
+          <ul class="profile_ul">
+            <li><a class="profile" href="profile.html"><span class="picon"><i class="fas fa-user-alt"></i></span> Change Profile</a></li>
+            <li><a class="address" href="change.html"><span class="picon"><i class="fas fa-map-marker"></i></span>Change Password</a></li>
+            <li><a class="logout" href="login.html"><span class="picon"><i class="fas fa-sign-out-alt"></i></span>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div> <br><br><br>
+
+<!--Resignation -->
+<div class="container">
+  <div class="title">Resignation Form</div>
+  <div class="content">
+    <form action="#">
+      <div class="user-details">
+        <div class="input-box">
+          <span class="details">Full Name</span>
+          <input type="text" placeholder="Enter your name" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Your Grade</span>
+          <input type="text" placeholder="Enter your grade" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Email</span>
+          <input type="text" placeholder="Enter your email" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Phone Number</span>
+          <input type="text" placeholder="Enter your number" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Student_Id</span>
+          <input type="text" placeholder="Enter your student_ID" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Reason for Resignation</span>
+          <input type="text" placeholder="Reason for Resignation" required>
+        </div>
+      </div>
+      <div class="gender-details">
+        <input type="radio" name="gender" id="dot-1">
+        <input type="radio" name="gender" id="dot-2">
+        <input type="radio" name="gender" id="dot-3">
+        <span class="gender-title">Gender</span>
+        <div class="category">
+          <label for="dot-1">
+          <span class="dot one"></span>
+          <span class="gender">Male</span>
+        </label>
+        <label for="dot-2">
+          <span class="dot two"></span>
+          <span class="gender">Female</span>
+        </label>
+        <label for="dot-3">
+          <span class="dot three"></span>
+          <span class="gender">Prefer not to say</span>
+          </label>
+        </div>
+      </div>
+      <div class="button">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+</div>
+
+  </section>
+  <script>
+  let arrow = document.querySelectorAll(".arrow");
+  for (var i = 0; i < arrow.length; i++) {
+    arrow[i].addEventListener("click", (e)=>{
+   let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+   arrowParent.classList.toggle("showMenu");
+    });
+  }
+  let sidebar = document.querySelector(".sidebar");
+  let sidebarBtn = document.querySelector(".bx-menu");
+  console.log(sidebarBtn);
+  sidebarBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("close");
+  });
+  </script>
+</body>
+</html>

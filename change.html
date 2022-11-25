@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="change.css">
+    <link rel="stylesheet" href="css/all.css">
+    <title>Change Password</title>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h2>Change Your Password</h2>
+		</div>
+		<form class="form" id="form">
+            <div class="form-control ">
+				<label>Current password</label>
+				<input type="text" placeholder="Current Password" id="username">
+				<small>Error message</small>
+			</div>
+			<div class="form-control">
+				<label>New Password</label>
+				<input type="password" placeholder="Enter Your password" id="password">
+				<small>Error message</small>
+			</div>
+			<div class="form-control">
+				<label>Confirm Password</label>
+				<input type="password" placeholder="Confirm password" id="password2">
+				<small>Error message</small>
+			</div>
+			<button>Submit</button>
+			<br>
+			<a class="leave" href="dashboard.html">Finished</a>
+		</form>
+	</div>
+
+
+
+
+
+
+
+	<script>
+		const username = document.getElementById('username');
+		const password = document.getElementById('password');
+		const password2 = document.getElementById('password2');
+
+		form.addEventListener('submit', (e)=>{
+			e.preventDefault();
+			checkInputs();
+		});
+
+		function checkInputs(){
+			const usernameValue = username.value.trim();
+			const passwordValue = password.value.trim();
+			const password2Value = password2.value.trim();
+
+
+			if(usernameValue ===''){
+				setErrorFor(username, 'Enter Your Current Password');
+			}else{
+				setSuccessFor(username);
+			}
+			
+
+			if(passwordValue ===''){
+				setErrorFor(password, 'Enter your Password');
+			}else{
+				setSuccessFor(password);
+			}
+
+
+			if(password2Value ===''){
+				setErrorFor(password2, 'Confirm Your Password');
+			}else if(passwordValue!== password2Value){
+				setErrorFor(password2, 'password does not match');
+			}else{
+				setSuccessFor(password2);
+			}
+		}
+
+
+
+
+		function setErrorFor(input, message){
+			const formControl = input.parentElement;
+			const small = formControl.querySelector('small');
+			small . innerText = message;
+			formControl.className = 'form-control error';
+		}
+		function setSuccessFor(input){
+			const formControl = input.parentElement;
+			formControl.className = 'form-control success';
+		}
+	</script>
+</body>
+</html>
